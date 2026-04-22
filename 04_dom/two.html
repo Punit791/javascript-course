@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Punit woth dom</title>
+</head>
+<body style="background-color: #212121; color: #fff;"> 
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    // yaha par output dekhne ke liye open with live server me page par inspet me console me dekhna hai. 
+   const parent =  document.querySelector(".parent")
+//    console.log(parent);
+// //    output :- <div class="parent">
+//     console.log(parent.children);  // abhi parent se child me jaa rahe hai 
+// //    output :- HTMLCollection(4) [div.day, div.day, div.day, div.day]>
+//     console.log(parent.children[1].innerHTML);
+//     //  output :- Tuesday
+
+    // for (let i = 0; i< parent.children.length; i++) {
+    //  console.log(parent.children[i].innerHTML);
+    //  }
+//     //  output: - Monday, Tuesday ,Wednesday,Thursday
+
+//     parent.children[1].style.color = "orange"
+//     // output : - page me tuesday ka color orange ho gaya hai 
+//     console.log("-----------------");
+    
+//     console.log(parent.firstElementChild);  
+//     // output :-   <div class="day">Monday</div>  ,, div.day
+//     console.log(parent.lastElementChild);
+//     // output :-   <div class="day">Thursday</div>  ,, div.day
+
+    const dayOne = document.querySelector('.day')
+    // console.log(dayOne);
+    // // output :- <div class="day">Monday</div> 
+    // console.log(dayOne.parentElement);   // child se parent par gaye 
+    // // output: - <div class="parent">.... </div>
+    // console.log(dayOne.nextElementSibling);
+    // // output :-  <div class="day">Tuesday</div>
+
+    console.log("NODES :" ,parent.childNodes);
+    // output :- NODES : NodeList(9) [text, div.day, text, div.day, text, div.day, text, div.day, text]
+
+    
+</script>
+</html>

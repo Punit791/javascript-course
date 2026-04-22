@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punit code</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // ye sab console me dikhega open with live server par inspet me 
+    const div = document.createElement('div') // createElement se (div) tag banate hai  HTML wala  
+    console.log(div);
+
+    div.className = "main" // <div class="main"></div>
+    div.id = Math.round(Math.random()*10+1) // <div class="main" id"-"></div> // .random se koi bhi number aayega // .round se point ke baad sab hat jaayega
+    div.setAttribute("title","generated title")//<div class="main" id="7" title="generated title"></div> // isme key or value me banaye 
+    div.style.backgroundColor = "green"  //<div class="main" id="4" title="generated title" style="background-color: green;"></div>
+    div.style.padding = "12px"   // paddling milega
+    div.innerText = "Punit code"   // <div class="main" id="8" title="generated title" style="background-color: green; padding: 12px;">Punit code</div>
+    // const addText = document.createTextNode("Punit code")
+    // div.appendChild(addText) // ya to ese karo  div.innerText = "Punit code"  ya ese  
+
+    document.body.appendChild(div) // isse page par dikhna suru hoga 
+</script>
+</html>
