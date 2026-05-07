@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Guess The Number</title>
+
+  <!-- CSS file link -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav>
+  <button>Home</button>
+  <button>Youtube channel</button>
+</nav>
+
+<!-- Game Container -->
+<div class="container">
+  <h1>Guess The Number</h1>
+  <p>Guess a number between <strong>1 to 100</strong></p>
+
+  <!-- User Input -->
+  <input type="number" id="guessField" placeholder="Enter your guess">
+
+  <!-- Submit Button -->
+  <button id="subt">Submit Guess</button>
+
+  <!-- Result Messages -->
+  <div class="resultParas">
+    <p>Previous Guesses: <span class="guesses"></span></p>
+    <p>Guesses Remaining: <span class="lastResult">10</span></p>
+    <p class="lowOrHi"></p>
+  </div>
+</div>
+
+<!-- JavaScript file -->
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #111;
+  color: white;
+}
+
+/* Navbar */
+nav {
+  background: #eee;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+nav button {
+  padding: 6px 14px;
+  cursor: pointer;
+}
+
+/* Main container */
+.project {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Table box */
+.color {
+  margin-top: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  color: white;
+}
+
+th, td {
+  border: 1px solid white;
+  padding: 8px 15px;
+  text-align: center;
+}

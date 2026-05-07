@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Events</title>
+</head>
+
+<!-- Body styling inline -->
+<body style="background-color: #414141; color: aliceblue;">
+
+  <h2>Amazing Images</h2>
+
+  <div>
+    <!-- Image List -->
+    <ul id="images">
+
+      <li>
+        <img width="200px" id="photoshop"
+          src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+          alt="photoshop">
+      </li>
+
+      <li>
+        <img width="200px" id="japan"
+          src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+          alt="">
+      </li>
+
+      <li>
+        <img width="200px" id="river"
+          src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+          alt="">
+      </li>
+
+      <li>
+        <img width="200px" id="owl"
+          src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+          alt="">
+      </li>
+
+      <li>
+        <img width="200px" id="prayer"
+          src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+          alt="">
+      </li>
+
+      <!-- Google link -->
+      <li>
+        <a style="color: aliceblue;" href="https://google.com" id="google">
+          Google
+        </a>
+      </li>
+
+    </ul>
+  </div>
+
+  <script>
+    // =========================
+    // EVENT PRACTICE FILE
+    // =========================
+
+    // Old way (not recommended now)
+    // document.getElementById('owl').onclick = function() {
+    //   alert("Owl clicked");
+    // }
+
+    // attachEvent()  (old IE)
+    // jQuery - on()
+
+    // Event object properties:
+    // type, timeStamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget
+    // clientX, clientY, screenX, screenY
+    // altKey, ctrlKey, shiftKey, keyCode
+
+
+    // Example: Event bubbling on UL
+    document.getElementById('images').addEventListener('click', function(e) {
+      console.log("Clicked inside the UL");
+    }, false);
+
+
+    // Example: Event on owl image
+    document.getElementById('owl').addEventListener('click', function(e) {
+      console.log("Owl clicked");
+      e.stopPropagation();   // bubbling stop karta hai
+    }, false);
+
+
+    // Example: Prevent default on Google link
+    document.getElementById('google').addEventListener('click', function(e) {
+      e.preventDefault();    // link open hone se rokta hai
+      e.stopPropagation();
+      console.log("Google clicked");
+    }, false);
+
+
+    // =========================
+    // FINAL WORKING CODE
+    // Click on any image → image remove ho jayegi
+    // =========================
+
+    // document.querySelector('#images').addEventListener('click', function (e) {
+
+    //   console.log(e.target.tagName);   // IMG or A etc.
+
+    //   // Check only image click
+    //   if (e.target.tagName === 'IMG') {
+
+    //     console.log(e.target.id);     // image id
+
+    //     // Parent <li> select karo
+    //     let removeIt = e.target.parentNode;
+
+    //     // Remove that <li> from DOM
+    //     removeIt.remove();
+    //   }
+
+    // });
+
+  </script>
+
+</body>
+</html>

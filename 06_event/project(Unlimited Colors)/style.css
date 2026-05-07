@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #b6bea5;
+}
+
+/* Navbar */
+nav {
+  background: #eee;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+nav button {
+  padding: 6px 14px;
+  cursor: pointer;
+}
+
+/* Main container */
+.container {
+  padding: 30px;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+button {
+  padding: 6px 14px;
+  cursor: pointer;
+}

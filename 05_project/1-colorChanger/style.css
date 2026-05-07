@@ -1,0 +1,84 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+  min-height: 100vh;
+  background-color: #f1f1f1;
+  transition: background-color 0.3s ease;
+}
+
+/* Navbar */
+nav {
+  background: #212121;
+  padding: 12px 20px;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Canvas Area */
+.canvas {
+  text-align: center;
+  margin-top: 60px;
+}
+
+/* Heading */
+h1 {
+  margin-bottom: 25px;
+}
+
+/* Color Buttons */
+.button {
+  height: 80px;
+  width: 80px;
+  display: inline-block;
+  margin: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 2px solid #212121;
+}
+
+/* Individual Colors */
+#grey {
+  background-color: grey;
+}
+
+#white {
+  background-color: white;
+}
+
+#blue {
+  background-color: blue;
+}
+
+#yellow {
+  background-color: yellow;
+}
+
+/* Info Text */
+h2 {
+  margin-top: 30px;
+  font-size: 18px;
+}
+
+h2 span {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #444;
+}

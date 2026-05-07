@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Start Stop Interval</title>
+</head>
+<body>
+
+  <h1>Punit Javascript</h1>
+  <button id="stop">Stop</button>
+  <button id="start">Start</button>
+
+<script>
+  
+  // Function jo time print karega
+  const sayDate = function (str) {
+    console.log(str, Date.now());
+  };
+
+  let intervalId = null;   // interval reference
+
+  // Start button
+  document.querySelector("#start").addEventListener("click", function () {
+
+    // Agar already chal raha hai to dobara start na ho
+    if (!intervalId) {
+      intervalId = setInterval(sayDate, 1000, "Present Time");
+      console.log("Interval Started");
+    }
+
+  });
+
+  // Stop button
+  document.querySelector("#stop").addEventListener("click", function () {
+
+    clearInterval(intervalId);
+    intervalId = null;   // reset
+    console.log("Interval Stopped");
+
+  });
+// isme setInterval ka use hota hai ki page baar baar load ho 
+// setTimeout ek baar hi load hota hai . 
+</script>
+</body>
+</html>

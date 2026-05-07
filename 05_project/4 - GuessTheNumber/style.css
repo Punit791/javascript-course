@@ -1,0 +1,60 @@
+/* Reset default spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Page background */
+body {
+  background-color: #222;
+  color: white;
+}
+
+/* Navigation bar */
+nav {
+  background-color: #eee;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+nav button {
+  padding: 6px 14px;
+  cursor: pointer;
+}
+
+/* Main container */
+.container {
+  max-width: 400px;
+  margin: 50px auto;
+  background: #333;
+  padding: 20px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* Input box */
+input {
+  padding: 8px;
+  width: 200px;
+  margin: 10px 0;
+}
+
+/* Button */
+button {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+/* Result text */
+.resultParas {
+  margin-top: 20px;
+}
+
+.lowOrHi {
+  margin-top: 10px;
+  font-weight: bold;
+}

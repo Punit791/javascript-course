@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Punit code </h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    
+    const saypunit = function(){
+        console.log("Punit");
+        // ye bho console me dekhna 
+    }
+    setTimeout(saypunit, 2000) // reference dena hia na ki call karna hai , ye reference hai 
+  // (handler) ye (settimeout) me hota hai , isliye reference hi sahi hai  
+
+    setTimeout(saypunit() , 4000) // ye function call hai ye bhi run hoga but ese nahi karte hai . 
+
+    // ya to ye 
+
+    // setTimeout(() => {
+    //     console.log("Punit");     
+    // }, 2000);  // ye console me print hoga or 2 second baad hi print hoga (settime method ki wajah se )
+
+
+    // setTimeout ek baar print hoga uske baad ruk jaayega 
+
+
+    const changeText = function () {
+        document.querySelector('h1'). // ye h1 ko select karega (document )page (queryselect) select karna 
+        innerHTML = "Best js series " // h1 change ho jaayega 
+    }
+
+    const changMe = setTimeout(changeText, 2000) // 2 second me change hoga help of (settimeout)
+
+    document.querySelector('#stop'). // 2 second hone se pahle hi stop par click karu to ruk jaaye 
+    addEventListener('click',function () { // click karne par (addEventListener('click') )
+    clearTimeout(changMe) // isse ruk jaaye 2 second hone se pahle rok diye tab help of (clearTimeout)
+    // yaha par references liye hai  (clearTimeout  (changMe) )
+    console.log("STOPPED");  // ye console me dikhega 
+    
+        
+    })
+
+
+</script>
+</html>
